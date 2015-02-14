@@ -1,0 +1,7 @@
+/Users/deannechan/.rbenv/versions/2.1.5/bin/ruby -rubygems /Users/deannechan/Documents/Github/sampleRails/vendor/bundle/ruby/2.1.0/gems/rake-10.4.2/bin/rake RUBYARCHDIR=/Users/deannechan/Documents/Github/sampleRails/vendor/bundle/ruby/2.1.0/extensions/x86_64-darwin-14/2.1.0-static/hotwater-0.1.2 RUBYLIBDIR=/Users/deannechan/Documents/Github/sampleRails/vendor/bundle/ruby/2.1.0/extensions/x86_64-darwin-14/2.1.0-static/hotwater-0.1.2
+mkdir -p x86_64-darwin
+clang -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing  -o x86_64-darwin/damerau_levenshtein.o -c ./damerau_levenshtein.c
+clang -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing  -o x86_64-darwin/jaro.o -c ./jaro.c
+clang -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing  -o x86_64-darwin/levenshtein.o -c ./levenshtein.c
+clang -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing  -o x86_64-darwin/ngram.o -c ./ngram.c
+clang -bundle -o x86_64-darwin/libhotwater.bundle x86_64-darwin/damerau_levenshtein.o x86_64-darwin/jaro.o x86_64-darwin/levenshtein.o x86_64-darwin/ngram.o -fexceptions 
