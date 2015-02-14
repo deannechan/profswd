@@ -7,5 +7,7 @@ class GamesController < ApplicationController
 		@names = User.all.to_a
 
 	end
+	def inventory
+	end
 	
 end
